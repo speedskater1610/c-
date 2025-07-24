@@ -1,7 +1,7 @@
 # C-
 
 **C-** is a lightweight object-oriented layer for the C programming language, written entirely in C.  
-It adds just enough abstraction to make C feel a little more modern — but not enough to be accused of using C++.
+It adds just enough abstraction to make C feel a little more modern but not enough to be accused of using C++.
 
 Think of it as:  
 >  *"C, but with classes and safety. Kind of."*
@@ -15,7 +15,7 @@ Think of it as:
 - **Basic memory-safe wrappers** (`safe_malloc`, `safe_realloc`)
 - **Simple string utilities** (e.g., `indexOfChar`, `substr`)
 - **`new(Class, var)` and `bind(...)` to simulate objects**
-- No compiler magic — just clever macros and raw C
+- No compiler magic just macros and raw C
 
 ---
 
