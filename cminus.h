@@ -1,5 +1,5 @@
-#ifndef CCLASS_H
-#define CCLASS_H
+#ifndef CMINUS_H
+#define CMINUS_H
 
 
 #include <stdlib.h>
@@ -159,4 +159,4 @@ static inline void* checked_realloc(void* ptr, size_t size, const char* file, in
     return new_ptr;
 }
 
-#endif // MEMSAFE_H
+#endif // CMINUS_H
