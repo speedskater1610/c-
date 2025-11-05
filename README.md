@@ -22,7 +22,7 @@ Think of it as:
 ##  Example
 
 ```c
-#include "cclass.h"
+#include "cminus.h"
 
 #define self_type Person
 class(Person) {
