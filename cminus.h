@@ -8,26 +8,13 @@
 
 
 // so that there is a boolean type
-#define bool int
+typedef unsigned char bool
 #define true 1
 #define false 0
 
 
-//for char*s
-typedef struct {
-    char *data;     // pointer to the character array
-    size_t length;  // current length of the string (excluding null terminator)
-    size_t capacity; // allocated capacity of the data array
-} String;
-
-String *newString (const char *initial_str) {
-    String s;
-    s->data = initial_str;
-    s->length = 
-}
-
-
-
+// String type
+typedef char* String
 
 //for index comparison
 #define npos -1
@@ -37,7 +24,7 @@ String *newString (const char *initial_str) {
 /// @param str      the string being substring-ed
 /// @param index1   the first index of the substring
 /// @param index2   the second index of the substring
-void substr (char* str, size_t index1, size_t index2) {
+void substr (String str, size_t index1, size_t index2) {
 
     // error handling so that ranges should work
     if (index1 >= index2) {
@@ -70,7 +57,7 @@ void substr (char* str, size_t index1, size_t index2) {
 /// @param str the string that that the char gets looked for in 
 /// @param index the char you are looking for
 /// @return npos or -1 if not found and the index where it is found if it is found
-int indexOfChar(const char* str, char ch) {
+int indexOfChar(const String str, char ch) {
     for (size_t i = 0; str[i] != '\0'; i++) {
         if (str[i] == ch) return (int)i;
     }
@@ -80,7 +67,7 @@ int indexOfChar(const char* str, char ch) {
 /// @param str the main string that the other string is being loooked for in
 /// @param index the string that is being looked for in the str varible
 /// @return npos or -1 if not found or the index of the first letter
-int indexOfStr (char* str, char* index) {
+int indexOfStr (String str, String index) {
     char* pos = strstr(str, substr);
     if (pos != NULL) {
         return (int)(pos - str); // pointer arithmetic to get index
